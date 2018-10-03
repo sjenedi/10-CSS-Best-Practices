@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- Sami Jenedi  12/07/2016 --> 
+<!-- 10 CSS "Best Practices"  -->
+
+<html lang="en">
+	<head>	
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+		<title>Home</title>
+			
+		<link href="styles/styles.css" rel="stylesheet">
+		<link rel="stylesheet" href="styles/printfinal.css" media="print">	
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	</head>
+			
+	<body>
+	<div id="wrapper">
+		<header>
+		<a href="http://students.jccc.edu/sjenedi/final/final1.html"><img src="images/css3.png" alt="CSS3" > </a>
+		<h1 style="margin-right: 1em; margin-top: 2.1em; " >10 CSS "Best Practices"</h1> 
+		</header>
+		<nav>
+			<ul class="topnav" >
+					  <li><a href="final1.html">Home</a></li>
+					  <li><a href="final2.html">Tips</a></li>
+					  <li><a href="final3.html">Validation</a></li>
+					  <li><a href="final4.html">Credits</a></li>
+					  <li><a href="final5.html">Form</a></li>			 
+			</ul>
+		</nav>
+		<main>
+		<h2>CSS Introduction</h2>
+		<h3>What is CSS? </h3>
+		
+		<ul>
+		<li>CSS stands for Cascading Style Sheets</li>
+		<li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+		<li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+		<li>External stylesheets are stored in CSS files</li>
+		<li>CSS is independent of HTML and can be used with any XML-based markup language. </li>
+		</ul>
+		<hr>
+			
+		<h3>Why Use CSS?</h3>
+		<p>CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes. </p>
+		<hr>
+		
+		<h3>CSS Solved a Big Problem</h3>
+		<p>HTML was NEVER intended to contain tags for formatting a web page!<br>
+
+		HTML was created to describe the content of a web page, like:<br><br>
+
+		&lt;h3>This is a heading&lt;/h3><br><br>
+
+		&lt;p>This is a paragraph.&lt;/p><br><br>
+
+		When tags like &lt;font>, and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.<br>
+
+		To solve this problem, the World Wide Web Consortium (W3C) created CSS.<br>
+
+		CSS removed the style formatting from the HTML page!</p>
+		<hr>
+		
+		<h3> CSS Saves a Lot of Work!</h3>
+		<p> The style definitions are normally saved in external .css files.
+
+		With an external stylesheet file, you can change the look of an entire website by changing just one file</p>
+		<hr>
+
+		<h3>Three Ways to Insert CSS</h3>
+		<p>There are three ways of inserting a style sheet:</p>
+			 <ul>
+				 <li>External style sheet</li>
+				 <li>Internal style sheet</li>
+				 <li>Inline style</li>
+			 </ul>
+		<hr>
+		
+		<h3>External Style Sheet</h3>
+		<p> With an external style sheet, you can change the look of an entire website by changing just one file!<br>
+
+		Each page must include a reference to the external style sheet file inside the  &lt;link> element. The  &lt;link> element goes inside the  &lt;head> section: <br>
+		An external style sheet can be written in any text editor. The file should not contain any html tags. The style sheet file must be saved with a .css extension.</p> 
+		<br>
+		<h3>Internal Style Sheet</h3>
+		<p>An internal style sheet may be used if one single page has a unique style.<br>
+
+		Internal styles are defined within the &lt;style> element, inside the &lt;head> section of an HTML page: </p>
+		<br>
+		
+		<h3>Inline Styles</h3>
+		<p>An inline style may be used to apply a unique style for a single element.<br>
+
+		To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.</p>
+		<hr>
+		<img src="images/final1.jpg" alt="CSS" style="float: left; margin-right: 1em; " >
+		<h3>Cascading Order</h3>
+		<p>What style will be used when there is more than one style specified for an HTML element?<br><br>
+
+			Generally speaking we can say that all the styles will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:<br> <br>
+
+			Inline style (inside an HTML element)<br><br>
+			External and internal style sheets (in the head section)<br><br>
+			Browser default<br><br>
+			So, an inline style (inside a specific HTML element) has the highest priority, which means that it will override a style defined inside the &lt;head> tag, or in an external style sheet, or a browser default value.</p>
+			<br><br>
+		
+		
+		</main>
+	<footer>
+	Copyright &copy; 2016 10 CSS "Best Practices" Sami Jenedi 
+	<p>
+	This is an email link:
+	<a href="mailto:samijenedi@hotmail.com?Subject=CSS%20Best%20Practices" target="_top">Send Us E-Mail</a>
+	</p>
+	
+				
+				<a href="final1.html">Home&nbsp;&nbsp;</a> 
+				<a href="final2.html">Tips&nbsp;&nbsp;</a> 
+				<a href="final3.html">Validation&nbsp;&nbsp;</a> 
+				<a href="final4.html">Credits&nbsp;&nbsp;</a> 
+				<a href="final5.html">Form&nbsp;&nbsp;</a> 
+				<a href="#top">Top</a>
+			
+
+	</footer>
+	</div>
+	</body>
+	
+</html>

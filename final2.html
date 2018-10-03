@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- Sami Jenedi  12/07/2016 --> 
+<!-- 10 CSS "Best Practices"  -->
+
+<html lang="en">
+	<head>	
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+		<title>10 CSS "Best Practices"</title>
+			
+		<link href="styles/styles.css" rel="stylesheet">
+		<link rel="stylesheet" href="styles/printfinal.css" media="print">	
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+			
+	<body>
+	<div id="wrapper">
+		<header>
+		<a href="http://students.jccc.edu/sjenedi/final/final1.html"><img src="images/css3.png" alt="CSS3" > </a>
+		<h1 style="margin-right: 1em; margin-top: 2.1em; " >10 CSS "Best Practices"</h1> 
+		</header>
+		<nav>
+			<ul class="topnav" >
+					  <li><a href="final1.html">Home</a></li>
+					  <li><a href="final2.html">Tips </a></li>
+					  <li><a href="final3.html">Validation</a></li>
+					  <li><a href="final4.html">Credits</a></li>
+					  <li><a href="final5.html">Form</a></li>			
+					 
+			</ul>
+		</nav>
+		<main>
+		 <article>
+		<p>It&#039;s really easy to find yourself wondering how your CSS got to be such a mess.</p>
+		<p>Sometimes it&#039;s the result of sloppy coding from the start, sometimes it&#039;s because of multiple hacks and changes over time.</p>
+		<p>Whatever the cause, it doesn&#039;t have to be that way. Writing clean, super-manageable CSS is simple when you start off on the right foot and make your code easier to maintain and edit later on.</p>
+		<p>Here are 10 tips for speeding up the process, writing CSS that is slimmer, faster and less likely to give you a headache.</p>
+			
+			<h2>1. Stay Organized</h2>
+			<p>Just like anything else, it pays to keep yourself organized. Rather than haphazardly dropping in id&#039;s and classes in the order in which they come to mind, use a coherent structure.</p>
+<p>It will help you keep the cascading part of CSS in mind and sets your style sheet up to take advantage of style inheritance.</p>
+<p><strong>Declare your most generic items first, then the not-so-generic and so on.</strong> This lets your CSS properly inherit attributes and makes it much easier for you to override a specific style when you need to. You&#039;ll be faster at editing your CSS later because it will follow an easy to read, logical structure.</p>
+<p>Use a structure that works best for you while keeping future edits and other developers in mind.</p>
+<ol>
+<li><strong>Resets and overrides</strong></li>
+<li><strong>Links and type</strong></li>
+<li><strong>Main layout</strong></li>
+<li><strong>Secondary layout structures</strong></li>
+<li><strong>Form elements</strong></li>
+<li><strong>Miscellaneous</strong></li>
+</ol>
+<img src="http://netdna.webdesignerdepot.com/uploads/best_css_practices/best-css-02.jpg" alt="Screenshot"  />
+
+<h2>2. Title, Date and Sign</h2>
+<p>Let others know who wrote your CSS, when it was written and who to contact if they have questions about it. This is especially useful when designing templates or themes.</p>
+<img src="http://netdna.webdesignerdepot.com/uploads/best_css_practices/best-css-03.jpg" alt="Screenshot" style="float: left; margin-right: 1em;" />
+<p>Wait a minute&#8230; what&#8217;s that bit about <strong>swatch colors</strong>? Over the years, I&#8217;ve found that adding a simple list of common colors used in my style sheets is extremely helpful during initial development and when making edits later on.</p>
+<p>This saves you from having to open up Photoshop to sample a color from the design, or look up colors in the site&#8217;s <a href="http://en.wikipedia.org/wiki/Style_guide"  class="external" rel="nofollow">style guide</a> (if it has one). When you need the HTML code for that specific blue, just scroll up and copy it.</p>
+
+<div id=col2><h2>3. Keep a Template Library</h2>
+<p>Once you&#8217;ve settled on a structure to use, strip out everything that isn&#8217;t generic and save the file as a CSS template for later use.</p>
+<p>You can save multiple versions for multiple uses: a two-column layout, a blog layout, print, mobile and so on. <a href="http://www.panic.com/coda/"  class="external" rel="nofollow">Coda</a> (the editor for OSX) has an awesome <strong>Clips</strong> feature that lets you do this easily. Many other editors have a similar feature, but even a simple batch of text files will work nicely.</p>
+<p>It&#8217;s insane to re-write each and every one of your style sheets from scratch, especially when you&#8217;re using the same conventions and methodologies in each.</p>
+<a href="http://www.flickr.com/photos/misterdna/49841409/" class="external" rel="nofollow"><img src="http://netdna.webdesignerdepot.com/uploads/best_css_practices/best-css-04.jpg" alt="Screenshot"  /></a>
+</div>		
+		
+<h2>4. Use Useful Naming Conventions</h2>
+<p>You&#039;ll notice above where I declared a couple of column id&#039;s and I called them col-alpha and col-beta. Why not just call them col-left and col-right? Think of future edits, always.</p>
+<p>Next year you may need to redesign your site and move that left column to the right. You shouldn&#039;t have to rename the element in your HTML and rename the id in your style sheet just to change its position.</p>
+<p>Sure, you could just reposition that left column to the right and keep the id as #col-left, but how confusing is that? If the id says left, one should expect that it will always be on the left. This doesn&#039;t leave you much room to move things around later on.</p>
+<p>One of the major advantages of CSS is the ability to separate styles from content. You can totally redesign your site by just modifying the CSS without ever touching the HTML. So <strong>don&#039;t muck up your CSS by using limiting names</strong>. Use more versatile naming conventions and stay consistent.</p>
+<p>Leave position or style specific words out of your styles and id&#039;s. A class of .link-blue will either make more work for you, or make your style sheet really messy when your client later asks you to change those blue links to orange.</p>
+<p><strong>Name your elements based on what they are, not what they look like.</strong> For example, .comment-blue is much less versatile than .comment-beta, and .post-largefont is more limiting than .post-title.</p>
+
+<h2>5. Hyphens Instead of Underscores</h2>
+<p>Older browsers like to get glitchy with underscores in CSS, or don&#039;t support them at all. For better backward compatibility, get into the habit of using hyphens instead. Use #col-alpha rather than #col_alpha.</p>
+
+
+<h2>6. Don&#039;t Repeat Yourself</h2>
+<p>Re-use attributes whenever possible by grouping elements instead of declaring the styles again. If your h1 and h2 elements both use the same font size, color and margins, group them using a comma.</p>
+<p>This:</p>
+<img src="http://netdna.webdesignerdepot.com/uploads/best_css_practices/best-css-05.jpg" alt="Screenshot" />
+<p>You should also make use of shortcuts whenever possible. Always be on the lookout for opportunities to group elements and use declaration shortcuts.</p>
+<p>You can accomplish all of this:</p>
+<img src="http://netdna.webdesignerdepot.com/uploads/best_css_practices/best-css-06.jpg" alt="Screenshot" />
+<p>with only this:</p>
+<img src="http://netdna.webdesignerdepot.com/uploads/best_css_practices/best-css-07.jpg" alt="Screenshot" />
+<p>It&#039;s very important that you understand the order in which CSS interprets these shortcuts: top, right, bottom, left. A big clockwise circle, starting at noon.</p>
+<p>Also, if your top and bottom, or left and right attributes are the same, you only need to use two:</p>
+<img src="http://netdna.webdesignerdepot.com/uploads/best_css_practices/best-css-08.jpg" alt="Screenshot" />
+<p>This sets the top and bottom margins to 1em, and the left and right margins to 0.</p>
+
+
+<h2>7. Optimize for Lightweight Style Sheets</h2>
+<p>Using the above tips, you can really cut down the size of your style sheets. Smaller loads faster, and smaller is easier to maintain and update.</p>
+<p>Cut out what you don&#039;t need and consolidate wherever possible by grouping. Use caution when using canned CSS frameworks as well. You&#039;re likely to inherit lots of bulk that won&#039;t be used.</p>
+<p>Another quick tip for slim CSS: you don&#039;t need to specify a unit of measure when using zero. If a margin is set to 0, you don&#039;t need to say 0px or 0em. Zero is zero regardless of the unit of measure, and CSS understands this.</p>
+
+<h2>8. Write Your Base for Gecko, Then Tweak for Webkit and IE</h2>
+<p>Save yourself troubleshooting headaches and write CSS first for Gecko browsers (Firefox, Mozilla, Netscape, Flock, Camino). If your CSS works properly with Gecko, it&#039;s much more likely to be problem free in Webkit (Safari, Chrome) and Internet Explorer.</p>
+
+
+<h2>9. Validate</h2>
+<p>Make use of <a href="http://jigsaw.w3.org/css-validator/"  class="external" rel="nofollow">W3C&#8217;s free CSS validator</a>. If you&#8217;re stuck and your layout isn&#8217;t doing what you want it to do, the CSS validator will be a big help in pointing out errors.</p>
+
+<h2>10. Keep a tidy house</h2>
+<p>Separate browser-specific CSS to its own individual style sheet, and include as needed with Javascript, server-side code or <a href="http://en.wikipedia.org/wiki/Conditional_comments"  class="external" rel="nofollow">conditional comments</a>. Use this method to avoid dirty CSS hacks in your main style sheets. This will keep your base CSS clean and manageable.</p>
+</article>
+
+	</main>
+	<footer>
+	Copyright &copy; 2016 10 CSS "Best Practices" Sami Jenedi 
+	<p>
+	This is an email link:
+	<a href="mailto:samijenedi@hotmail.com?Subject=CSS%20Best%20Practices" target="_top">Send Us E-Mail</a>
+	</p>
+	
+				
+				<a href="final1.html">Home&nbsp;&nbsp;</a> 
+				<a href="final2.html">Tips&nbsp;&nbsp;</a> 
+				<a href="final3.html">Validation&nbsp;&nbsp;</a> 
+				<a href="final4.html">Credits&nbsp;&nbsp;</a> 
+				<a href="final5.html">Form&nbsp;&nbsp;</a> 
+				<a href="#top">Top</a>
+			
+
+	</footer>
+	</div>
+	</body>
+	
+</html>
